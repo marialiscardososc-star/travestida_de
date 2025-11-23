@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🎯 Projeto: Travestida de - Análise Linguística
 
 ## 📋 Descrição
@@ -197,3 +198,6 @@ Este projeto é de uso acadêmico e educacional.
 ---
 
 **Desenvolvido com ❤️ para pesquisa em Linguística Forense**
+=======
+# travestida_de
+>>>>>>> 78e1ad25ddc59b12709a4ba3297d5cf775c4c7ae
