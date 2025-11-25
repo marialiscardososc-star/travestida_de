@@ -3,16 +3,17 @@
    ============================================================ */
 
 const dadosEvolucao = [
-  { ano: 2015, casos: 8 },
-  { ano: 2016, casos: 10 },
-  { ano: 2017, casos: 12 },
-  { ano: 2018, casos: 15 },
-  { ano: 2019, casos: 16 },
-  { ano: 2020, casos: 18, pico: true }, // pico
-  { ano: 2021, casos: 14 },
-  { ano: 2022, casos: 12 },
-  { ano: 2023, casos: 10 },
-  { ano: 2024, casos: 7 },
+  { ano: 2015, casos: 5.0 },
+  { ano: 2016, casos: 7.0 },
+  { ano: 2017, casos: 9.0 },
+  { ano: 2018, casos: 12.0 },
+  { ano: 2019, casos: 15.0 },
+  { ano: 2020, casos: 17.5, pico: true }, // pico
+  { ano: 2021, casos: 16.0 },
+  { ano: 2022, casos: 10.0 },
+  { ano: 2023, casos: 5.0 },
+  { ano: 2024, casos: 2.0 },
+  { ano: 2025, casos: 1.0 },
 ];
 
 /* ============================================================
