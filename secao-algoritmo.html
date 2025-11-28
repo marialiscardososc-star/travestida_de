@@ -1,0 +1,234 @@
+<!-- ============================================================
+     SEÇÃO DO ALGORITMO DE ANÁLISE DE ENTROPIA
+     Copie e cole esta seção no seu index.html dentro da tag <main>
+     ============================================================ -->
+
+<section id="algoritmo" class="secao-algoritmo">
+  <div class="container">
+    
+    <!-- Título e Descrição -->
+    <h2 class="algoritmo-titulo">🤖 Ferramenta Interativa: Analise Seu Próprio Texto</h2>
+    
+    <p class="algoritmo-descricao">
+      Você tem um texto e quer saber se ele é rígido ou flexível? Cole aqui e deixe a <strong>Física Informacional</strong> fazer a análise! 
+      O algoritmo vai calcular a entropia, detectar padrões discursivos e comparar com os padrões que a gente encontrou na pesquisa.
+    </p>
+
+    <!-- Formulário de Input -->
+    <form class="algoritmo-form" onsubmit="event.preventDefault(); analisarTextoUsuario();">
+      <div class="form-group">
+        <label for="textoInput">Cole seu texto aqui (mínimo 50 palavras):</label>
+        <textarea 
+          id="textoInput" 
+          placeholder="Cole um trecho de um artigo, decisão judicial, ou qualquer texto que você queira analisar. Quanto mais longo, melhor a análise!"
+          aria-label="Campo para colar texto para análise"
+        ></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-analisar">
+          ⚡ Analisar Entropia
+        </button>
+        <button type="button" class="btn-limpar" onclick="limparAnalise()">
+          🔄 Limpar
+        </button>
+      </div>
+    </form>
+
+    <!-- Seção de Resultados (inicialmente oculta) -->
+    <div id="resultados">
+      
+      <!-- 1. CLASSIFICAÇÃO DE RIGIDEZ -->
+      <div class="resultado-secao">
+        <h3 class="resultado-titulo">📊 Classificação de Rigidez/Flexibilidade</h3>
+        <div id="classificacaoRigidez"></div>
+      </div>
+
+      <!-- 2. BARRA DE RIGIDEZ -->
+      <div class="resultado-secao">
+        <h3 class="resultado-titulo">📈 Escala de Rigidez Discursiva</h3>
+        <div id="barraRigidez"></div>
+      </div>
+
+      <!-- 3. NUVEM DE PALAVRAS -->
+      <div class="resultado-secao">
+        <h3 class="resultado-titulo">☁️ Palavras-Chave (Nuvem)</h3>
+        <p style="color: #9CA3AF; font-size: 0.95rem; margin-bottom: 1rem;">
+          Quanto maior a palavra, mais frequente ela aparece no seu texto. Essas são as palavras que definem o seu discurso.
+        </p>
+        <div id="nuvemPalavras"></div>
+      </div>
+
+      <!-- 4. PADRÕES DETECTADOS -->
+      <div class="resultado-secao">
+        <h3 class="resultado-titulo">🔍 Padrões Discursivos Detectados</h3>
+        <p style="color: #9CA3AF; font-size: 0.95rem; margin-bottom: 1rem;">
+          Esses são os padrões que indicam rigidez ou flexibilidade no seu discurso:
+        </p>
+        <div id="padroes"></div>
+      </div>
+
+      <!-- 5. COMPARAÇÃO COM PADRÕES -->
+      <div class="resultado-secao">
+        <h3 class="resultado-titulo">🎯 Comparação com Padrões Conhecidos</h3>
+        <p style="color: #9CA3AF; font-size: 0.95rem; margin-bottom: 1rem;">
+          Comparamos seu texto com os padrões que encontramos na pesquisa:
+        </p>
+        <div id="comparacao"></div>
+      </div>
+
+      <!-- 6. GRÁFICO DE ENTROPIA -->
+      <div class="resultado-secao">
+        <h3 class="resultado-titulo">📉 Gráfico Comparativo de Entropia</h3>
+        <div class="grafico-container">
+          <canvas id="graficoEntropiaComparativa"></canvas>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Exemplos e Dicas -->
+    <div class="exemplos-container">
+      <h3 class="exemplos-titulo">💡 Exemplos para Testar</h3>
+      
+      <div class="exemplo-item">
+        <div class="exemplo-titulo">Exemplo 1: Texto Rígido (com "travestida de")</div>
+        <div class="exemplo-texto">
+          "A ação está travestida de legitimidade. O autor alega que a ação está travestida de direito. A decisão anterior estava travestida de fundamentação. O recurso está travestida de razão jurídica válida."
+        </div>
+      </div>
+
+      <div class="exemplo-item">
+        <div class="exemplo-titulo">Exemplo 2: Texto Flexível (variado)</div>
+        <div class="exemplo-texto">
+          "A jurisprudência brasileira tem evoluído significativamente. Os tribunais reconhecem diferentes perspectivas. A doutrina aponta para novas interpretações. As decisões contemporâneas refletem essa diversidade de pensamento."
+        </div>
+      </div>
+
+      <div class="exemplo-item">
+        <div class="exemplo-titulo">Dica: Copie um acórdão real</div>
+        <div class="exemplo-texto">
+          Você pode copiar um acórdão real de um tribunal (disponível em sites como tjsp.jus.br, stj.jus.br, etc.) e analisar a entropia da linguagem jurídica!
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     SCRIPTS NECESSÁRIOS
+     Adicione estas linhas no final do seu index.html, antes de </body>
+     ============================================================ -->
+
+<!-- Script do Analisador de Entropia -->
+<script src="js/entropia-avancado.js"></script>
+
+<!-- CSS do Algoritmo -->
+<link rel="stylesheet" href="css/entropia-visualizacoes.css">
+
+<!-- Script para Gráficos (se não estiver incluído) -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+
+<!-- Script para inicializar gráficos -->
+<script>
+function initGraficoEntropiaComparativa(entropiaNormalizada) {
+  const ctx = document.getElementById('graficoEntropiaComparativa');
+  if (!ctx) return;
+
+  // Destruir gráfico anterior se existir
+  if (window.graficoEntropiaInstance) {
+    window.graficoEntropiaInstance.destroy();
+  }
+
+  window.graficoEntropiaInstance = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Seu Texto', 'Padrão Rígido\n(com "travestida de")', 'Padrão Flexível\n(sem "travestida de")'],
+      datasets: [{
+        label: 'Entropia (S*)',
+        data: [entropiaNormalizada, 2.8, 3.5],
+        backgroundColor: [
+          '#00A0D6',
+          '#EF4444',
+          '#10B981'
+        ],
+        borderColor: [
+          '#0088B8',
+          '#DC2626',
+          '#059669'
+        ],
+        borderWidth: 2,
+        borderRadius: 8,
+        padding: 10
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        legend: {
+          display: true,
+          labels: {
+            color: '#E5E7EB',
+            font: {
+              size: 14,
+              weight: '600'
+            }
+          }
+        },
+        tooltip: {
+          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          titleColor: '#E5E7EB',
+          bodyColor: '#E5E7EB',
+          borderColor: '#00A0D6',
+          borderWidth: 1,
+          padding: 12,
+          displayColors: false,
+          callbacks: {
+            label: function(context) {
+              return 'Entropia: ' + context.parsed.y.toFixed(2);
+            }
+          }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          max: 4,
+          ticks: {
+            color: '#9CA3AF',
+            font: {
+              size: 12
+            }
+          },
+          grid: {
+            color: 'rgba(0, 160, 214, 0.1)',
+            drawBorder: false
+          },
+          title: {
+            display: true,
+            text: 'Entropia (S*)',
+            color: '#E5E7EB'
+          }
+        },
+        x: {
+          ticks: {
+            color: '#9CA3AF',
+            font: {
+              size: 12
+            }
+          },
+          grid: {
+            display: false,
+            drawBorder: false
+          }
+        }
+      }
+    }
+  });
+}
+
+// Exportar função para uso global
+window.initGraficoEntropiaComparativa = initGraficoEntropiaComparativa;
+</script>

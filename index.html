@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Travestida de: Uma jornada interativa pela Física Informacional e Análise do Discurso. Descubra como a linguagem funciona através de dados, visualizações e um algoritmo de pesquisa automatizado.">
+  <meta name="keywords" content="física informacional, entropia, análise do discurso, linguística forense, divulgação científica, travestida de, Maria Lis Cardoso">
+  <meta name="author" content="Maria Lis Cardoso | Manus AI">
+  <meta name="theme-color" content="#0B0E13">
+  
+  <title>Travestida de: Física Informacional & Análise do Discurso | Divulgação Científica</title>
+  
+  <!-- Preconnect para otimização -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/fapesp-integration.css">
+  
+  <!-- Chart.js para gráficos -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER FIXO COM NAVEGAÇÃO
+       ============================================================ -->
+  <header class="header" role="banner">
+    <div class="header-container">
+      <!-- Newsletter Badge -->
+      <div class="newsletter-badge">
+        <span class="newsletter-icon">📰</span>
+        <span class="newsletter-text">Perspectivas de Resistência</span>
+      </div>
+
+      <!-- Logo, Título e Newsletter Badge -->
+      <div class="header-brand">
+        <div class="logo-container">
+          <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#00A0D6" stroke-width="2"/>
+            <path d="M 50 20 Q 70 50 50 80 Q 30 50 50 20" fill="#00A0D6" opacity="0.3"/>
+            <circle cx="50" cy="50" r="8" fill="#00A0D6"/>
+          </svg>
+        </div>
+        <div class="header-text">
+          <h1>Travestida de</h1>
+          <p class="header-subtitle">Física Informacional & Análise do Discurso</p>
+          <a href="https://marialiscardoso.substack.com/" target="_blank" rel="noopener" class="newsletter-link">📰 Perspectivas de Resistência</a>
+        </div>
+      </div>
+
+      <!-- Busca e Filtro de Tribunal -->
+      <div class="search-container">
+        <input 
+          type="search" 
+          id="searchInput" 
+          class="search-input" 
+          placeholder="Buscar no documento..." 
+          aria-label="Campo de busca no documento"
+        >
+        <button class="search-btn" onclick="buscarConteudo()" aria-label="Executar busca">
+          <span>🔍</span>
+        </button>
+      </div>
+
+      <!-- Menu Lateral de Filtro por Tribunal (Mobile Colapsável) -->
+      <div class="tribunal-filter" id="tribunalFilter">
+        <h3 class="tribunal-filter-title">Filtrar por Tribunal</h3>
+        <div class="tribunal-buttons">
+          <button class="tribunal-btn" data-tribunal="TJ-SP">TJ-SP</button>
+          <button class="tribunal-btn" data-tribunal="TJ-PR">TJ-PR</button>
+          <button class="tribunal-btn" data-tribunal="TJ-MG">TJ-MG</button>
+          <button class="tribunal-btn" data-tribunal="Outros">Outros</button>
+          <button class="tribunal-btn tribunal-btn-reset" onclick="resetTribunalFilter()">Limpar Filtro</button>
+        </div>
+      </div>
+
+      <!-- Menu Toggle (Mobile) -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Navegação Principal -->
+    <nav class="nav-principal" id="navPrincipal" role="navigation" aria-label="Navegação principal">
+      <a href="#hero" class="nav-link">Home</a>
+      <a href="#introducao" class="nav-link">Introdução</a>
+      <a href="#metodologia" class="nav-link">Metodologia</a>
+      <a href="#resultados" class="nav-link">Resultados</a>
+      <a href="#discussao" class="nav-link">Discussão</a>
+      <a href="#agenda" class="nav-link">Agenda</a>
+      <a href="#cta-newsletter" class="nav-link">Newsletter</a>
+      <a href="#autora" class="nav-link">Sobre</a>
+    </nav>
+  </header>
+
+  <!-- ============================================================
+       CONTEÚDO PRINCIPAL
+       ============================================================ -->
+  <main role="main">
+
+    <!-- ============================================================
+         SEÇÃO HERO
+         ============================================================ -->
+    <section id="hero" class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <p class="hero-eyebrow">🔬 Quando a Física encontra a Linguagem</p>
+          <h2 class="hero-title">
+            <strong>Travestida de</strong>: O Poder das Palavras Revelado
+          </h2>
+          <p class="hero-description">
+            Você já parou pra pensar que as palavras que a gente usa têm peso? Que elas podem ser medidas, analisadas e até previstas? Nessa pesquisa, a gente descobriu que a expressão <strong>"travestida de"</strong> funciona como um <strong>código secreto</strong> no discurso jurídico brasileiro. É tipo um padrão que se repete, que deixa o discurso previsível, rígido. A gente usou <strong>Física Informacional</strong> (sim, Física mesmo!) pra medir isso e descobrir coisas incríveis sobre como a linguagem funciona.
+          </p>
+
+          <!-- Badges de Impacto -->
+          <div class="hero-badges">
+            <div class="badge">
+              <span class="badge-number">100</span>
+              <span class="badge-label">Acórdãos Analisados</span>
+            </div>
+            <div class="badge">
+              <span class="badge-number">65%</span>
+              <span class="badge-label">Taxa de Procedência</span>
+            </div>
+            <div class="badge">
+              <span class="badge-number">20%</span>
+              <span class="badge-label">Redução de Entropia</span>
+            </div>
+            <div class="badge">
+              <span class="badge-number">1</span>
+              <span class="badge-label">Metodologia Generalizável</span>
+            </div>
+          </div>
+
+          <!-- Botões de Ação -->
+          <div class="hero-actions">
+            <a href="#metodologia" class="btn btn-primary">Vem Descobrir Como</a>
+            <a href="artigo_original.pdf" class="btn btn-secondary" target="_blank" rel="noopener">
+              📄 Ler Artigo Científico
+            </a>
+          </div>
+        </div>
+
+        <!-- Aside com Descobertas Principais -->
+        <aside class="hero-aside">
+          <h3>📌 Principais Descobertas</h3>
+          <ul class="discoveries-list">
+            <li>
+              <strong>Entropia Reduzida:</strong> S* = 2,8 com "travestida de" vs. S* = 3,5 sem
+            </li>
+            <li>
+              <strong>Pico Temporal:</strong> 17,5 casos em 2020, seguido de declínio gradual
+            </li>
+            <li>
+              <strong>Contexto Jurídico:</strong> 45% das ocorrências em Direito Civil
+            </li>
+            <li>
+              <strong>Padrão Discursivo:</strong> Associação com "Simulação" (18%)
+            </li>
+          </ul>
+          <p class="hero-note">
+            <em>Dados coletados de tribunais brasileiros entre 2015 e 2025 (N=100)</em>
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SEÇÃO INTRODUÇÃO
+         ============================================================ -->
+    <section id="introducao" class="secao">
+      <div class="secao-header">
+        <svg class="secao-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="15" width="80" height="70" fill="none" stroke="#00A0D6" stroke-width="2" rx="5"/>
+          <line x1="20" y1="30" x2="80" y2="30" stroke="#00A0D6" stroke-width="2"/>
+          <line x1="20" y1="45" x2="80" y2="45" stroke="#00A0D6" stroke-width="1.5" opacity="0.7"/>
+          <line x1="20" y1="60" x2="80" y2="60" stroke="#00A0D6" stroke-width="1.5" opacity="0.7"/>
+          <line x1="20" y1="75" x2="60" y2="75" stroke="#00A0D6" stroke-width="1.5" opacity="0.7"/>
+        </svg>
+        <h2>O que é "Travestida de"?</h2>
+      </div>
+
+      <div class="secao-content">
+        <article>
+          <p>
+            Imagina um juiz escrevendo: <em>"A ação está <strong>travestida de</strong> legitimidade"</em>. O que ele tá fazendo ali? Não é só descrever a situação. Ele tá usando uma palavra-chave que sinaliza: <em>"Olha, isso é falso, é uma mentira disfarçada"</em>. Essa expressão é como um <strong>alarme</strong> no discurso jurídico. E a gente descobriu que esse alarme toca sempre da mesma forma, sempre com as mesmas palavras ao redor.
+          </p>
+
+          <p>
+            A expressão <strong>"travestida de"</strong> é um <strong>marcador linguístico</strong>. Pense em um marcador como um post-it que o juiz cola no texto pra avisar: <em>"Ó, aqui tem algo que não é o que parece"</em>. Quando você começa a ver padrões, começa a entender como a linguagem funciona. E quando você consegue medir esses padrões, consegue prever quando eles vão aparecer.
+          </p>
+
+          <div class="destaque">
+            <strong>💡 Questão Central:</strong> Como a expressão "travestida de" afeta a estrutura informacional e a previsibilidade do discurso jurídico? Quais são suas implicações para a legitimidade das decisões judiciais?
+          </div>
+
+          <p>
+            Mas como a gente mede uma coisa invisível como a linguagem? Como a gente sabe se um discurso é rígido ou flexível? É aí que entra a <strong>Física Informacional</strong>. Sim, Física mesmo! A gente pegou conceitos da Física (entropia, energia, sistemas complexos) e aplicou na linguagem. E funcionou.
+          </p>
+
+          <h3>Contexto e Relevância</h3>
+          <p>
+            Estudos anteriores em linguística forense têm demonstrado que marcadores discursivos específicos podem revelar vieses cognitivos e padrões de raciocínio judicial. A expressão "travestida de" representa um caso particularmente interessante por sua carga semântica de <strong>desmascaramento</strong> e <strong>revelação de falsidade</strong>, atuando como um <strong>atrator</strong> no sistema discursivo.
+          </p>
+
+          <!-- Infográfico: O que é Entropia? -->
+          <div class="infografico">
+            <h4>O que é Entropia?</h4>
+            <div class="entropia-visual">
+              <div class="entropia-box baixa-entropia">
+                <div class="particulas">
+                  <div class="particula"></div>
+                  <div class="particula"></div>
+                  <div class="particula"></div>
+                  <div class="particula"></div>
+                  <div class="particula"></div>
+                </div>
+                <p><strong>Baixa Entropia</strong><br>Discurso rígido: previsível, repetitivo</p>
+              </div>
+              <div class="entropia-box alta-entropia">
+                <div class="particulas">
+                  <div class="particula"></div>
+                  <div class="particula"></div>
+                  <div class="particula"></div>
+                  <div class="particula"></div>
+                  <div class="particula"></div>
+                </div>
+                <p><strong>Alta Entropia</strong><br>Discurso flexível: variado, criativo</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Expansível: Metodologia Interativa -->
+          <div class="metodologia-card">
+            <button class="metodologia-card-toggle" onclick="toggleMetodologiaCard()">📖 Expandir Metodologia</button>
+            <div class="metodologia-card-content" id="metodologiaCardContent">
+              <div class="metodologia-texto">
+                <p>A pesquisa utiliza a <strong>Física Informacional</strong> para medir a rigidez do discurso jurídico. Através do conceito de <strong>Entropia de Shannon</strong>, medimos o grau de incerteza e variabilidade. Descobrimos que o uso de <strong>'travestida de'</strong> reduz a entropia lexical (S* = 0,42), indicando um discurso rígido, repetitivo e com alta previsibilidade (82%), funcionando como uma fórmula cristalizada para denotar simulação.</p>
+              </div>
+              <div class="metodologia-tooltips">
+                <span class="tooltip-trigger" title="Medida da desordem ou imprevisibilidade de um sistema. No discurso, alta entropia significa criatividade; baixa entropia significa repetição.">💡 Entropia</span>
+                <span class="tooltip-trigger" title="Sistemas complexos exibem propriedades emergentes que não podem ser reduzidas ao comportamento individual de suas partes. O discurso jurídico é um sistema complexo.">💡 Sistemas Complexos</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SEÇÃO METODOLOGIA
+         ============================================================ -->
+    <section id="metodologia" class="secao">
+      <div class="secao-header">
+        <svg class="secao-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="35" fill="none" stroke="#00A0D6" stroke-width="2"/>
+          <circle cx="50" cy="50" r="20" fill="none" stroke="#00A0D6" stroke-width="2"/>
+          <circle cx="50" cy="50" r="5" fill="#00A0D6"/>
+          <path d="M 50 50 L 70 30" stroke="#00A0D6" stroke-width="2"/>
+        </svg>
+        <h2 id="metodologia">Como a Gente Descobriu Isso?</h2>
+      </div>
+      <!-- Âncora invisível para navegação de conceito -->
+      <div id="entropia-shannon" style="scroll-margin-top: 180px;"></div>
+
+      <div class="secao-content">
+        <article>
+          <p>
+            Esta pesquisa investiga a rigidez do discurso jurídico brasileiro aplicando conceitos da <strong>Física Informacional</strong> à Análise do Discurso. Utilizamos o conceito de <span class="tag-conceito" data-conceito-id="entropia-shannon" data-definicao="Medida da desordem ou imprevisibilidade de um sistema. No discurso, alta entropia significa criatividade e variedade; baixa entropia significa repetição e rigidez."><strong>Entropia de Shannon</strong></span> para medir o grau de incerteza e variabilidade dos textos judiciais.
+          </p>
+          <p>
+            A pesquisa utiliza a <strong>Física Informacional</strong> para medir a rigidez do discurso jurídico. Através do conceito de <span class="tooltip-trigger" data-tooltip="Medida da desordem ou imprevisibilidade de um sistema. No discurso, alta entropia significa criatividade e variedade; baixa entropia significa repetição e rigidez."><strong>Entropia de Shannon</strong></span>, medimos o grau de incerteza e variabilidade. Descobrimos que o uso de 'travestida de' reduz a entropia lexical (S* = 0,42), indicando um discurso rígido, repetitivo e com <strong>alta previsibilidade (82%)</strong>, funcionando como uma <strong>fórmula cristalizada</strong> para denotar simulação.
+          </p>
+
+          <h3>1. Coleta de Dados</h3>
+          <p>
+            O corpus de análise foi construído a partir de acórdãos de Tribunais de Justiça. O período de coleta abrange <strong>2015 a 2025</strong>, totalizando <strong>100 acórdãos</strong> que contêm a expressão "travestida de" em contextos argumentativos relevantes.
+          </p>
+
+          <ul class="lista-metodologia">
+            <li><strong>Fontes:</strong> Tribunais de Justiça Estaduais (TJs), Tribunais Regionais Federais (TRFs), Superior Tribunal de Justiça (STJ)</li>
+            <li><strong>Critérios de inclusão:</strong> Decisões que utilizam "travestida de" em contexto argumentativo</li>
+            <li><strong>Critérios de exclusão:</strong> Citações de doutrina, transcrições de peças processuais</li>
+            <li><strong>Período:</strong> Janeiro de 2015 a Dezembro de 2025</li>
+          </ul>
+
+          <h3>2. Análise de Entropia Informacional</h3>
+          <p>
+            Depois que a gente tinha os dados, a gente usou uma fórmula da Física chamada <strong>Entropia de Shannon</strong>. Essa fórmula mede quanto de "ordem" ou "desordem" tem em um sistema. No caso da linguagem, a gente mediu: quando tem a expressão "travestida de", o discurso fica mais previsível? Ou fica mais variado?
+          </p>
+
+          <div class="destaque">
+            <strong>Fórmula da Entropia:</strong><br>
+            <code>S* = -Σ p(x) · log₂ p(x)</code><br><br>
+            <em>Onde p(x) representa a probabilidade de ocorrência de cada elemento lexical no corpus.</em>
+          </div>
+
+          <p>
+            Foram comparados dois conjuntos de textos:
+          </p>
+          <ul class="lista-metodologia">
+            <li><strong>Grupo A:</strong> Acórdãos que contêm "travestida de" (n = 100)</li>
+            <li><strong>Grupo B:</strong> Decisões de controle sem a expressão, mas com temática similar (n = 120)</li>
+          </ul>
+
+          <!-- Visualização: Mapa de Tribunais (FAPESP Style) -->
+          <div class="visualizacao" style="max-width: 600px; margin: 2rem auto;">
+            <h4 style="font-size: var(--fs-xl); color: var(--amarelo-destaque); margin-bottom: 0.5rem;">Distribuição Geográfica do Corpus</h4>
+            <p class="caption" style="font-size: var(--fs-sm); color: var(--cinza-claro); margin-bottom: 1rem;">
+              O corpus de 100 acórdãos foi coletado em tribunais de diferentes regiões, garantindo a abrangência da análise.
+            </p>
+            <canvas id="mapaTribunais" style="max-height: 300px;"></canvas>
+            <p class="caption" style="font-size: var(--fs-sm); color: var(--cinza-claro); margin-top: 0.5rem;">
+              * Dados de 2015 a 2025.
+            </p>
+          </div>
+          <div class="visualizacao">
+            <h4>Distribuição Geográfica do Corpus</h4>
+            <canvas id="mapaTribunais"></canvas>
+            <p class="caption">Acórdãos analisados por tribunal de origem</p>
+          </div>
+
+          <!-- Visualização: Entropia Interativa (FAPESP Style) -->
+          <div class="visualizacao" style="max-width: 600px; margin: 2rem auto;">
+            <h4 style="font-size: var(--fs-xl); color: var(--amarelo-destaque); margin-bottom: 0.5rem;">Entropia em Tempo Real</h4>
+            <p class="caption" style="font-size: var(--fs-sm); color: var(--cinza-claro); margin-bottom: 1rem;">
+              A Entropia (S*) mede a variedade lexical. Mova o slider para simular a rigidez do discurso.
+            </p>
+            <div class="entropia-slider">
+              <label for="entropiaSlider" style="color: var(--texto-principal); font-weight: 600;">Simulador de Rigidez Discursiva:</label>
+              <input type="range" id="entropiaSlider" min="0" max="100" value="50" class="slider" style="width: 100%; margin: 1rem 0;">
+              <div class="entropia-resultado" style="display: flex; justify-content: space-around; text-align: center; margin-top: 1rem;">
+                <div class="entropia-item">
+                  <p style="font-size: var(--fs-sm); color: var(--cinza-claro);">Entropia Simulação</p>
+                  <div id="entropiaSimulada" style="font-size: var(--fs-2xl); font-weight: 700; color: var(--azul-neon);">3.15</div>
+                </div>
+                <div class="entropia-item">
+                  <p style="font-size: var(--fs-sm); color: var(--cinza-claro);">Classificação</p>
+                  <div id="classificacaoSimulada" style="font-size: var(--fs-2xl); font-weight: 700; color: var(--amarelo-destaque);">Moderada</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="visualizacao">
+            <h4>Entropia em Tempo Real</h4>
+            <div class="entropia-slider">
+              <label for="entropiaSlider">Mova o slider pra ver como a entropia muda:</label>
+              <input type="range" id="entropiaSlider" min="0" max="100" value="50" class="slider">
+              <div class="entropia-resultado">
+                <div class="entropia-comparacao">
+                  <div class="entropia-item esquerda">
+                    <p><strong>Sem "travestida de"</strong></p>
+                    <div class="entropia-bar alta">
+                      <span class="entropia-valor">3.5</span>
+                    </div>
+                    <p class="entropia-label">Entropia Alta<br>Muita variedade</p>
+                  </div>
+                  <div class="entropia-item direita">
+                    <p><strong>Com "travestida de"</strong></p>
+                    <div class="entropia-bar baixa">
+                      <span class="entropia-valor">2.8</span>
+                    </div>
+                    <p class="entropia-label">Entropia Baixa<br>Pouca variedade</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nuvem de Palavras (FAPESP Style) -->
+          <div class="visualizacao" style="max-width: 600px; margin: 2rem auto;">
+            <h4 style="font-size: var(--fs-xl); color: var(--amarelo-destaque); margin-bottom: 0.5rem;">Nuvem de Palavras</h4>
+            <p class="caption" style="font-size: var(--fs-sm); color: var(--cinza-claro); margin-bottom: 1rem;">
+              As 50 palavras mais frequentes no corpus. O tamanho da palavra indica sua frequência.
+            </p>
+            <div id="nuvemPalavras" class="nuvem-palavras" style="min-height: 200px; border: 1px solid rgba(0, 160, 214, 0.1); padding: 1rem; border-radius: 8px;">
+              <!-- Palavras serão injetadas aqui pelo JS -->
+            </div>
+            <p class="caption" style="font-size: var(--fs-sm); color: var(--cinza-claro); margin-top: 0.5rem;">
+              * Stopwords (palavras comuns) foram removidas.
+            </p>
+          </div>
+          <div class="visualizacao">
+            <h4>Nuvem de Palavras - Modais Interativos</h4>
+            <p class="caption" style="margin-bottom: 1rem; color: var(--cinza-claro);">Clique em uma palavra para ver definição jurídica detalhada, contexto e frequência:</p>
+            <div class="word-cloud">
+              <button class="word word-modal-trigger" onclick="mostrarModalConceito('simulacao', this)" style="font-size: 2.5em; cursor: pointer; border: none; background: none; padding: 0;">Simulação</button>
+              <button class="word word-modal-trigger" onclick="mostrarModalConceito('doacao', this)" style="font-size: 1.8em; cursor: pointer; border: none; background: none; padding: 0;">Doação</button>
+              <button class="word word-modal-trigger" onclick="mostrarModalConceito('compra-venda', this)" style="font-size: 1.6em; cursor: pointer; border: none; background: none; padding: 0;">Compra e Venda</button>
+              <button class="word word-modal-trigger" onclick="mostrarModalConceito('fomento', this)" style="font-size: 1.2em; cursor: pointer; border: none; background: none; padding: 0;">Fomento</button>
+              <button class="word word-modal-trigger" onclick="mostrarModalConceito('factoring', this)" style="font-size: 1.1em; cursor: pointer; border: none; background: none; padding: 0;">Factoring</button>
+              <span class="word" style="font-size: 1.3em;">Contrato</span>
+              <span class="word" style="font-size: 1.4em;">Negócio</span>
+              <span class="word" style="font-size: 1.2em;">Operação</span>
+            </div>
+            <p class="caption">Tamanho proporcional à frequência. Clique em palavras destacadas para explorar definições completas.</p>
+          </div>
+          <!-- Âncoras invisíveis para navegação -->
+          <div id="conceito-simulacao" style="scroll-margin-top: 180px;"></div>
+          <div id="conceito-doacao" style="scroll-margin-top: 180px;"></div>
+          <div id="conceito-compra-venda" style="scroll-margin-top: 180px;"></div>
+          <div id="conceito-fomento" style="scroll-margin-top: 180px;"></div>
+          <div id="conceito-factoring" style="scroll-margin-top: 180px;"></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SEÇÃO RESULTADOS
+         ============================================================ -->
+    <section id="resultados" class="secao">
+      <div class="secao-header">
+        <svg class="secao-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <rect x="15" y="60" width="15" height="25" fill="#00A0D6"/>
+          <rect x="35" y="40" width="15" height="45" fill="#00A0D6"/>
+          <rect x="55" y="20" width="15" height="65" fill="#00A0D6"/>
+          <rect x="75" y="50" width="15" height="35" fill="#00A0D6"/>
+        </svg>
+        <h2>O que a Gente Encontrou?</h2>
+      </div>
+
+      <!-- ============================================================
+           SISTEMA DE FILTROS POR TRIBUNAL
+           ============================================================ -->
+      <div class="filtros-container">
+        <label class="filtros-label">
+          🏛️ Filtrar por Tribunal:
+        </label>
+        <button data-filtro-tribunal="todos" class="ativo">
+          Ver Todos
+        </button>
+        <button data-filtro-tribunal="TJ-SP">
+          TJ-SP (25%)
+        </button>
+        <button data-filtro-tribunal="TJ-PR">
+          TJ-PR (18%)
+        </button>
+        <button data-filtro-tribunal="TJ-MG">
+          TJ-MG (15%)
+        </button>
+        <button data-filtro-tribunal="Outros">
+          Outros (42%)
+        </button>
+      </div>
+
+      <div class="secao-content">
+        <article>
+          <h3>Evolução Temporal (2015-2025)</h3>
+          <p>
+            A expressão "travestida de" não aparece sempre. Ela tem um padrão temporal. Entre 2015 e 2019, a gente vê um aumento gradual. Mas em 2020, <strong>BOOM!</strong> Pico máximo: 17,5 casos. Depois disso, começa a cair. Por quê? Pode ser que os juízes começaram a usar outras expressões. Ou que a jurisprudência mudou. Mas o fato é: tem um padrão.
+          </p>
+
+          <div class="visualizacao">
+            <canvas id="graficoEvolucao"></canvas>
+            <p class="caption">Número de ocorrências por ano (2015-2025)</p>
+          </div>
+
+          <h3>Distribuição Geográfica e Insights Regionais</h3>
+          <p>
+            Nem todos os tribunais usam "travestida de" da mesma forma. Os dados mostram uma concentração significativa em regiões específicas.
+          </p>
+
+          <div class="distribuicao-container">
+            <div class="grafico-coluna">
+              <div class="visualizacao" style="width: 100%;">
+                <canvas id="graficoPizza"></canvas>
+                <p class="caption">Distribuição de acórdãos por tribunal</p>
+              </div>
+            </div>
+            <div class="insights-coluna">
+              <!-- ============================================================
+                   COMPONENTE STORYTELLING CAROUSEL
+                   ============================================================ -->
+              <div class="storytelling-carousel">
+                <div id="storytelling-carousel"></div>
+                
+                <div class="carousel-controls">
+                  <button class="carousel-btn" data-carousel-prev="true" onclick="prevSlide()">
+                    ← Anterior
+                  </button>
+                  <button class="carousel-btn" data-carousel-next="true" onclick="nextSlide()">
+                    Próximo →
+                  </button>
+                </div>
+
+                <div class="carousel-dots" data-carousel-dots></div>
+              </div>
+            </div>
+          </div>
+
+          <h3>Contexto Jurídico</h3>
+          <p>
+            Quando a gente olha pra que tipo de direito a expressão aparece, a gente vê que 45% é em Direito Civil. Isso faz sentido, porque "travestida de" é muito usada quando tem simulação contratual.
+          </p>
+
+          <div class="visualizacao">
+            <canvas id="graficoContexto"></canvas>
+            <p class="caption">Distribuição por área do direito</p>
+          </div>
+
+          <h3>Entropia Reduzida</h3>
+          <p>
+            O grande achado: quando "travestida de" aparece, a entropia cai de 3,5 pra 2,8. Isso significa que o discurso fica 20% mais rígido. As palavras que vêm depois são sempre as mesmas. É como se o juiz tivesse um "script" pré-escrito.
+          </p>
+
+          <div class="visualizacao">
+            <canvas id="graficoEntropia"></canvas>
+            <p class="caption">Comparação de entropia: com vs. sem "travestida de"</p>
+          </div>
+
+          <div class="destaque">
+            <strong>📈 O Pico de 2020:</strong> Por que 2020 teve o maior número de casos? Pode ser coincidência, ou pode ser que a pandemia tenha gerado mais litígios sobre contratos simulados. Essa é uma pergunta aberta pra futuras pesquisas!
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SEÇÃO DISCUSSÃO
+         ============================================================ -->
+    <section id="discussao" class="secao">
+      <div class="secao-header">
+        <svg class="secao-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="35" r="15" fill="none" stroke="#00A0D6" stroke-width="2"/>
+          <circle cx="70" cy="35" r="15" fill="none" stroke="#00A0D6" stroke-width="2"/>
+          <path d="M 30 50 Q 50 65 70 50" fill="none" stroke="#00A0D6" stroke-width="2"/>
+          <circle cx="50" cy="80" r="12" fill="none" stroke="#00A0D6" stroke-width="2"/>
+        </svg>
+        <h2>O que Isso Significa?</h2>
+      </div>
+
+      <div class="secao-content">
+        <article>
+          <h3>Implicações Teóricas</h3>
+          <p>
+            Quando a gente descobre que uma palavra reduz a entropia do discurso, a gente tá descobrindo algo profundo: <strong>a linguagem não é aleatória</strong>. Ela segue padrões. E esses padrões podem ser medidos com ferramentas da Física. Isso muda a forma como a gente entende a linguagem. Não é só arte, é ciência.
+          </p>
+
+          <h3>Implicações Práticas</h3>
+          <p>
+            Agora vem a pergunta importante: e daí? Se a gente sabe que "travestida de" reduz a entropia, o que a gente faz com essa informação? Bem, a gente pode usar isso pra treinar máquinas a reconhecer padrões no discurso jurídico. A gente pode criar algoritmos que ajudem juízes a identificar quando eles estão sendo previsíveis demais. A gente pode melhorar a qualidade das decisões judiciais.
+          </p>
+
+          <h3>Implicações Éticas</h3>
+          <p>
+            Mas tem uma questão ética aqui. Se a gente consegue medir a rigidez do discurso, a gente consegue também detectar vieses. Se um juiz sempre usa "travestida de" pra desqualificar certos tipos de ação, a gente consegue ver isso nos dados. E isso abre a porta pra questionar: será que o juiz tá sendo justo? Será que ele tá deixando seus preconceitos influenciarem suas decisões?
+          </p>
+
+          <h3>Limitações e Próximos Passos</h3>
+          <p>
+            Claro, essa pesquisa tem limitações. A gente analisou só 100 acórdãos. Seria interessante expandir pra 1000, 10000. A gente analisou só a expressão "travestida de". Mas tem outras expressões que podem ter padrões semelhantes. E a gente analisou só o contexto jurídico. Mas a mesma metodologia pode ser aplicada em jornalismo, política, publicidade. As possibilidades são infinitas.
+          </p>
+
+          <!-- Infográfico: Do Teórico ao Prático -->
+          <div class="infografico">
+            <h4>Do Teórico ao Prático</h4>
+            <div class="pipeline">
+              <div class="pipeline-step">
+                <div class="step-icon">🔬</div>
+                <p><strong>Descoberta Teórica</strong><br>Entropia reduzida = Discurso rígido</p>
+              </div>
+              <div class="pipeline-arrow">→</div>
+              <div class="pipeline-step">
+                <div class="step-icon">⚙️</div>
+                <p><strong>Aplicação Prática</strong><br>Treinar máquinas a reconhecer padrões</p>
+              </div>
+              <div class="pipeline-arrow">→</div>
+              <div class="pipeline-step">
+                <div class="step-icon">🌍</div>
+                <p><strong>Impacto Social</strong><br>Melhorar qualidade de decisões judiciais</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cards de Aplicação - Clicáveis com Modais -->
+          <div class="infografico">
+            <h4>Possibilidades de Aplicação</h4>
+            <p class="caption" style="margin-bottom: 1rem; color: var(--cinza-claro);">Clique em um card para ver detalhes e aplicações práticas:</p>
+            <div class="aplicacoes">
+              <button class="aplicacao-card aplicacao-card-jurisprudencia" onclick="mostrarModalAplicacao('jurisprudencia', this)" style="border: none; background: none; padding: 0; cursor: pointer;">
+                <div class="aplicacao">
+                  <span class="aplicacao-icon">📜</span>
+                  <p><strong>Jurisprudência</strong></p>
+                </div>
+              </button>
+              <button class="aplicacao-card aplicacao-card-jornalismo" onclick="mostrarModalAplicacao('jornalismo', this)" style="border: none; background: none; padding: 0; cursor: pointer;">
+                <div class="aplicacao">
+                  <span class="aplicacao-icon">📰</span>
+                  <p><strong>Jornalismo</strong></p>
+                </div>
+              </button>
+              <button class="aplicacao-card aplicacao-card-politica" onclick="mostrarModalAplicacao('politica', this)" style="border: none; background: none; padding: 0; cursor: pointer;">
+                <div class="aplicacao">
+                  <span class="aplicacao-icon">🏛️</span>
+                  <p><strong>Política</strong></p>
+                </div>
+              </button>
+              <button class="aplicacao-card aplicacao-card-publicidade" onclick="mostrarModalAplicacao('publicidade', this)" style="border: none; background: none; padding: 0; cursor: pointer;">
+                <div class="aplicacao">
+                  <span class="aplicacao-icon">📢</span>
+                  <p><strong>Publicidade</strong></p>
+                </div>
+              </button>
+              <button class="aplicacao-card aplicacao-card-educacao" onclick="mostrarModalAplicacao('educacao', this)" style="border: none; background: none; padding: 0; cursor: pointer;">
+                <div class="aplicacao">
+                  <span class="aplicacao-icon">🎓</span>
+                  <p><strong>Educação</strong></p>
+                </div>
+              </button>
+            </div>
+          </div>
+          <!-- Âncoras invisíveis -->
+          <div id="aplicacao-jurisprudencia" style="scroll-margin-top: 180px;"></div>
+          <div id="aplicacao-jornalismo" style="scroll-margin-top: 180px;"></div>
+          <div id="aplicacao-politica" style="scroll-margin-top: 180px;"></div>
+          <div id="aplicacao-publicidade" style="scroll-margin-top: 180px;"></div>
+          <div id="aplicacao-educacao" style="scroll-margin-top: 180px;"></div>
+
+          <div class="destaque">
+            <strong>🤔 Pensamento Crítico:</strong> Essa pesquisa levanta uma questão importante: será que a linguagem que a gente usa nos mostra quem a gente é? Se um juiz sempre usa "travestida de" de forma previsível, o que isso diz sobre sua forma de pensar?
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SEÇÃO AGENDA FUTURA
+         ============================================================ -->
+    <section id="agenda" class="secao">
+      <div class="secao-header">
+        <svg class="secao-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="20" width="60" height="60" fill="none" stroke="#00A0D6" stroke-width="2" rx="5"/>
+          <line x1="20" y1="35" x2="80" y2="35" stroke="#00A0D6" stroke-width="2"/>
+          <circle cx="35" cy="50" r="3" fill="#00A0D6"/>
+          <circle cx="35" cy="65" r="3" fill="#00A0D6"/>
+          <line x1="45" y1="50" x2="75" y2="50" stroke="#00A0D6" stroke-width="1"/>
+          <line x1="45" y1="65" x2="75" y2="65" stroke="#00A0D6" stroke-width="1"/>
+        </svg>
+        <h2>Próximas Etapas</h2>
+      </div>
+
+      <div class="secao-content">
+        <p>
+          Essa pesquisa é só o começo. Tem muito mais pra explorar. Aqui estão as próximas etapas que a gente tá planejando.
+        </p>
+
+        <!-- Acordeão -->
+        <div class="acordeao">
+          <div class="acordeao-item">
+            <button class="acordeao-titulo" onclick="toggleAcordeao(this)">
+              <span class="acordeao-icon">+</span>
+              <span>📚 Analisar 1000+ acórdãos</span>
+            </button>
+            <div class="acordeao-conteudo">
+              <p>Aumentar o tamanho da amostra pra ter mais confiança nos resultados. Incluir tribunais superiores (STF, STJ) e decisões mais antigas.</p>
+            </div>
+          </div>
+
+          <div class="acordeao-item">
+            <button class="acordeao-titulo" onclick="toggleAcordeao(this)">
+              <span class="acordeao-icon">+</span>
+              <span>🔄 Comparar com outras expressões</span>
+            </button>
+            <div class="acordeao-conteudo">
+              <p>Analisar expressões como "disfarçado de", "mascarado de", "enganosamente apresentado como". Será que elas têm padrões semelhantes?</p>
+            </div>
+          </div>
+
+          <div class="acordeao-item">
+            <button class="acordeao-titulo" onclick="toggleAcordeao(this)">
+              <span class="acordeao-icon">+</span>
+              <span>🌍 Levar a metodologia pra outras áreas</span>
+            </button>
+            <div class="acordeao-conteudo">
+              <p>A mesma metodologia pode ser aplicada em textos jornalísticos, discursos políticos e anúncios publicitários. Qual será a entropia nesses contextos?</p>
+            </div>
+          </div>
+
+          <div class="acordeao-item">
+            <button class="acordeao-titulo" onclick="toggleAcordeao(this)">
+              <span class="acordeao-icon">+</span>
+              <span>🤖 Criar um algoritmo automatizado</span>
+            </button>
+            <div class="acordeao-conteudo">
+              <p>Treinar uma máquina (machine learning) pra reconhecer quando um discurso tá sendo rígido. Isso pode ajudar juízes, jornalistas e políticos a melhorar suas comunicações.</p>
+            </div>
+          </div>
+
+          <div class="acordeao-item">
+            <button class="acordeao-titulo" onclick="toggleAcordeao(this)">
+              <span class="acordeao-icon">+</span>
+              <span>🎓 Levar pra escolas e universidades</span>
+            </button>
+            <div class="acordeao-conteudo">
+              <p>Criar materiais didáticos pra ensinar sobre Física Informacional, Análise do Discurso e Sistemas Complexos. Mostrar que ciência é pra todo mundo.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="destaque">
+          <strong>🚀 Visão:</strong> Imagina um mundo onde a gente consegue medir a qualidade do discurso. Onde máquinas ajudam a gente a ser mais criativo, mais flexível, mais justo. Esse é o futuro que a gente tá construindo.
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CALL-TO-ACTION: NEWSLETTER PERSPECTIVAS DE RESISTÊNCIA
+         ============================================================ -->
+    <section id="cta-newsletter" class="secao" style="background: linear-gradient(135deg, var(--azul-profundo) 0%, var(--grafite-escuro) 100%); padding: var(--spacing-3xl) var(--spacing-2xl);">
+      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <h2 style="color: var(--amarelo-destaque); margin-bottom: var(--spacing-lg);">📰 Perspectivas de Resistência</h2>
+        <p style="font-size: var(--fs-lg); color: var(--cinza-claro); margin-bottom: var(--spacing-xl);">
+          Acompanhe a jornada transdisciplinar da autora e receba análises críticas sobre Direito, Tecnologia, Linguagem e Epistemologias.
+        </p>
+        <a href="https://marialiscardoso.substack.com/" target="_blank" rel="noopener" class="btn btn-primary" style="background-color: var(--amarelo-destaque); color: var(--grafite-escuro); font-size: var(--fs-base);">
+          ✉️ Assine Agora
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SEÇÃO SOBRE A AUTORA
+         ============================================================ -->
+    <section id="autora" class="secao-fapesp" style="padding-top: var(--spacing-3xl); padding-bottom: var(--spacing-3xl);">
+      <div class="secao-imagem" style="max-width: 300px; margin: 0 auto; box-shadow: none; background-color: transparent;">
+        <!-- Placeholder para a imagem de perfil da autora -->
+        <img src="assets/images/autora_perfil_placeholder.jpg" alt="Foto de Maria Lis Cardoso" loading="lazy" style="border-radius: 50%; border: 4px solid var(--azul-neon);">
+      </div>
+      <div class="secao-conteudo-fapesp">
+        <span class="categoria-fapesp" style="background-color: rgba(0, 160, 214, 0.1); color: var(--azul-neon);">Autora & Pesquisadora</span>
+        <h3 style="font-size: var(--fs-3xl); margin-bottom: var(--spacing-md);">Maria Lis Cardoso 🏳️‍⚧️</h3>
+        <p style="font-size: var(--fs-lg); font-weight: 600; color: var(--amarelo-destaque);">
+          Traduzindo Lógica Humana em Código Funcional | Jurista Crítica & Data Analyst em Transição | Neurodivergente (TEA 1) & PwD | Python/JS | Foco em Automação e Soluções Escaláveis.
+        </p>
+        <p>
+          Minha trajetória é a intersecção entre a profundidade analítica e a sistematização de dados. Como Bacharel em Direito e pesquisadora crítica, trago uma base sólida em raciocínio estrutural e análise de sistemas complexos.
+        </p>
+        <p>
+          Atualmente, estou em uma transição estratégica para People Analytics e Desenvolvimento Web, instrumentalizando minha lógica com Python, JavaScript, HTML e CSS. Minha formação transdisciplinar (Licenciatura em Matemática/Física em andamento) reforça minha capacidade de traduzir problemas complexos em soluções algorítmicas e escaláveis.
+        </p>
+        <p>
+          **Meu Diferencial:** Como mulher neurodivergente (TEA 1) e PwD, a lógica, a previsibilidade e a sistematização (PMV) são pilares que garantem minha excelência e foco. Transformo o rigor da pesquisa social em entregas práticas e automatizadas, agregando uma visão humana e profundamente organizada ao ambiente de trabalho.
+        </p>
+        <div class="hero-actions" style="margin-top: var(--spacing-xl);">
+          <a href="https://www.linkedin.com/in/marialiscardoso/" target="_blank" rel="noopener" class="btn btn-primary" style="background-color: #0077B5; color: white;">
+            Conecte-se no LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="autora" class="secao autora-secao">
+      <div class="secao-header">
+        <svg class="secao-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="35" r="18" fill="none" stroke="#00A0D6" stroke-width="2"/>
+          <path d="M 30 65 Q 30 55 50 55 Q 70 55 70 65 L 70 80 L 30 80 Z" fill="none" stroke="#00A0D6" stroke-width="2"/>
+        </svg>
+        <h2>Sobre a Autora</h2>
+      </div>
+
+      <div class="secao-content autora-content">
+        <div class="autora-info">
+          <p>
+            <strong>Maria Lis Cardoso</strong>  Estou em Transição Estratégica para People Analytics"Minha trajetória é a intersecção entre a profundidade analítica e a sistematização de dados. Como Bacharel em Direito e pesquisadora crítica, trago uma base sólida em raciocínio estrutural e análise de sistemas complexos.Atualmente, estou em uma transição estratégica para People Analytics e Desenvolvimento Web, instrumentalizando minha lógica com Python, JavaScript, HTML e CSS. Minha formação transdisciplinar (Licenciatura em Matemática/Física em andamento) reforça minha capacidade de traduzir problemas complexos em soluções algorítmicas e escaláveis.Meu Diferencial:Alta Performance: Como mulher neurodivergente (TEA 1) e PCD, a lógica, a previsibilidade e a sistematização (PMV) são pilares que garantem minha excelência e foco.Proposta de Valor: Transformo o rigor da pesquisa social em entregas práticas e automatizadas, agregando uma visão humana e profundamente organizada ao ambiente de trabalho.Busco ativamente: Oportunidades que valorizem a visão transdisciplinar e a capacidade de construir processos eficientes, utilizando a tecnologia para otimizar a gestão de pessoas e projetos.Vamos Conectar: Se você busca uma profissional que une a ética do Direito à eficiência do Algoritmo, estou à disposição para colaborar.Autora da newsletter 'Perspectivas de Resistência' e pesquisadora em Direitos Humanos e Epistemologias Jurídicas.", Análise do Discurso e Física Informacional. integrando como discente do programa de pós graduação da Universidade Federal do Recôncavo da Baiano  (UFRB) lincencianda em matematica pela ufsc e lincencianda em física pela universidade federal de sergipe e acredita que a ciência deve ser acessível pra todo mundo. Essa pesquisa é resultado de anos de dedicação, curiosidade e vontade de entender como a linguagem funciona.
+          </p>
+
+          <blockquote class="citacao-autora">
+            "A linguagem é o espelho da mente. Quando a gente entende a linguagem, a gente entende a gente mesmo."
+          </blockquote>
+
+          <div class="autora-contato">
+            <h4>Conecte-se</h4>
+            <ul class="contato-links">
+              <li><a href="https://github.com/marialiscardososc-star" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/marialiscardoso/" target="_blank" rel="noopener">LinkedIn</a></li>
+           <li><a href="marialiscardososc@gmail.com">Email</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-content">
+      <p>&copy; 2025 Maria Lis Cardoso </p>
+      <p>
+        <a href="#" target="_blank">Política de Privacidade</a> | 
+        <a href="#" target="_blank">Termos de Uso</a> | 
+        <a href="https://github.com/marialiscardososc-star/travestida_de" target="_blank" rel="noopener">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/modals.js"></script>
+  <script src="js/filtros.js"></script>
+  <script src="js/storytelling.js"></script>
+  <script src="js/tribunal-filter.js"></script>
+  <script src="js/api-client.js"></script>
+</body>
+</html>
