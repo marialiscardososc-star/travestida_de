@@ -43,7 +43,7 @@ function initFiltros() {
     });
   });
   
-  console.log('Sistema de filtros inicializado com', botoesFiltro.length, 'botões');
+  // console.log('Sistema de filtros inicializado com', botoesFiltro.length, 'botões');
 }
 
 function aplicarFiltro(tribunal) {
@@ -104,7 +104,7 @@ function filtrarResultados(tribunal) {
 
 function atualizarGraficos(tribunal) {
   // Esta função pode ser expandida para atualizar gráficos em tempo real
-  console.log('Gráficos atualizados para tribunal:', tribunal);
+  // console.log('Gráficos atualizados para tribunal:', tribunal);
 }
 
 function showNotification(message, type = 'info') {

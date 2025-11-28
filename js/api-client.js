@@ -47,7 +47,7 @@ async function postAPI(endpoint, payload) {
 // CARREGAR DADOS DO DASHBOARD
 // ============================================================
 async function carregarDashboard() {
-  console.log('📊 Carregando dados do dashboard...');
+  // console.log('📊 Carregando dados do dashboard...');
   
   const dados = await fetchAPI('/api/dashboard');
   if (!dados) {
@@ -61,14 +61,14 @@ async function carregarDashboard() {
   if (badges.length >= 2) badges[1].textContent = dados.data.taxa_procedencia;
   if (badges.length >= 3) badges[2].textContent = dados.data.entropia_reducao;
   
-  console.log('✅ Dashboard carregado');
+  // console.log('✅ Dashboard carregado');
 }
 
 // ============================================================
 // CARREGAR GRÁFICOS (COM DELAY PARA GARANTIR RENDERIZAÇÃO)
 // ============================================================
 async function carregarGraficosComAPI() {
-  console.log('📈 Carregando dados dos gráficos...');
+  // console.log('📈 Carregando dados dos gráficos...');
 
   // Esperar DOM estar pronto
   setTimeout(async () => {
@@ -88,7 +88,7 @@ async function carregarGraficosComAPI() {
     const entropia = await fetchAPI('/api/entropia-comparacao');
     if (entropia) atualizarGraficoEntropia(entropia.data);
 
-    console.log('✅ Gráficos carregados');
+    // console.log('✅ Gráficos carregados');
   }, 1500);
 }
 
@@ -215,7 +215,7 @@ function atualizarGraficoEntropia(data) {
 // FILTRO POR TRIBUNAL
 // ============================================================
 async function filtrarPorTribunal(tribunalCode) {
-  console.log(`🏛️ Filtrando por ${tribunalCode}...`);
+  // console.log(`🏛️ Filtrando por ${tribunalCode}...`);
   
   filtroTribunalAtual = tribunalCode;
   
@@ -234,7 +234,7 @@ async function filtrarPorTribunal(tribunalCode) {
     <p><strong>Entropia Média:</strong> ${dados.data.entropia_media}</p>
   `;
 
-  console.log('✅ Filtro aplicado');
+  // console.log('✅ Filtro aplicado');
 }
 
 function criarSeccaoFiltro() {
@@ -255,7 +255,7 @@ function criarSeccaoFiltro() {
 // ANÁLISE DE TEXTO PERSONALIZADO
 // ============================================================
 async function analisarTextoComAPI(texto) {
-  console.log('🔍 Analisando texto...');
+  // console.log('🔍 Analisando texto...');
   
   if (!texto || texto.trim().length < 20) {
     alert('Por favor, cole um texto com pelo menos 20 caracteres');
@@ -278,7 +278,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Verificar se API está disponível
   fetchAPI('/health').then(data => {
     if (data && data.status === 'ok') {
-      console.log('✅ API Backend disponível');
+      // console.log('✅ API Backend disponível');
       carregarDashboard();
       carregarGraficosComAPI();
     } else {

@@ -56,7 +56,7 @@ let indiceAtual = 0;
 function initStorytelling() {
   const container = document.getElementById('storytelling-carousel');
   if (!container) {
-    console.log('Container de storytelling não encontrado');
+    // console.log('Container de storytelling não encontrado');
     return;
   }
 
